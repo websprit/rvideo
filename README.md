@@ -1,6 +1,6 @@
 # RVideo
 
-实际服务代码在 [rust-backend](/Users/jizhenggang/Documents/kvideo/KVideo/rust-backend)，`public/` 下的静态资源会被 Rust 服务直接提供。
+实际服务代码在 `rust-backend/`，`public/` 下的静态资源会被 Rust 服务直接提供。
 
 ## 本地运行
 
@@ -37,6 +37,27 @@ docker compose up -d
 
 服务默认监听 `3000` 端口。
 
+## 订阅配置
+
+订阅源通过环境变量配置：
+
+- `SUBSCRIPTION_SOURCES`
+
+本地运行时可以这样传入：
+
+```bash
+cd rust-backend
+SUBSCRIPTION_SOURCES="https://example.com/a.txt,https://example.com/b.json" cargo run
+```
+
+使用 `docker-compose` 时，在根目录 `docker-compose.yml` 的 `rvideo.environment` 里添加：
+
+```yaml
+- SUBSCRIPTION_SOURCES=https://example.com/a.txt,https://example.com/b.json
+```
+
+如果只有一个订阅地址，直接写一个即可。多个地址用英文逗号分隔。
+
 ## 项目结构
 
 - `rust-backend/`：Axum + MySQL 的完整服务与页面层
@@ -54,4 +75,4 @@ cargo test
 
 ## 许可证
 
-本项目采用 `Apache-2.0` 许可证，见 [LICENSE](/Users/jizhenggang/Documents/kvideo/KVideo/LICENSE)。
+本项目采用 `Apache-2.0` 许可证，见 `LICENSE`。

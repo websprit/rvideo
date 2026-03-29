@@ -36,6 +36,24 @@ cargo run
 - `ACCESS_PASSWORD`：全局访问密码，启用后会通过 `kvideo_access_granted` Cookie 维持解锁状态
 - `PERSIST_PASSWORD`：默认 `true`，设为 `false` 时访问密码只在当前浏览器会话内有效
 
+## 订阅配置
+
+订阅源通过 `SUBSCRIPTION_SOURCES` 环境变量传入。
+
+示例：
+
+```bash
+SUBSCRIPTION_SOURCES="https://example.com/a.txt,https://example.com/b.json" cargo run
+```
+
+如果用 `docker-compose`，就在根目录 `docker-compose.yml` 里给 `rvideo.environment` 增加：
+
+```yaml
+- SUBSCRIPTION_SOURCES=https://example.com/a.txt,https://example.com/b.json
+```
+
+多个订阅地址用英文逗号分隔。
+
 ## Docker Compose
 
 在仓库根目录运行：
@@ -48,4 +66,4 @@ docker compose up -d
 
 ## 许可证
 
-本项目采用 `Apache-2.0` 许可证，见 [LICENSE](/Users/jizhenggang/Documents/kvideo/KVideo/LICENSE)。
+本项目采用 `Apache-2.0` 许可证，见根目录 `LICENSE`。
