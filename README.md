@@ -1,7 +1,5 @@
 # RVideo
 
-这个仓库现在只保留 Rust 版本。
-
 实际服务代码在 [rust-backend](/Users/jizhenggang/Documents/kvideo/KVideo/rust-backend)，`public/` 下的静态资源会被 Rust 服务直接提供。
 
 ## 本地运行
@@ -53,3 +51,7 @@ cd rust-backend
 cargo fmt --check
 cargo test
 ```
+
+## 许可证
+
+本项目采用 `Apache-2.0` 许可证，见 [LICENSE](/Users/jizhenggang/Documents/kvideo/KVideo/LICENSE)。

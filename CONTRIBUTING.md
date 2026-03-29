@@ -1,6 +1,6 @@
 # 贡献指南
 
-当前仓库只保留 Rust 版本，主要代码位于 `rust-backend/`。
+主要代码位于 `rust-backend/`。
 
 ## 本地开发
 

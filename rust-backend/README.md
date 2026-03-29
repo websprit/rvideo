@@ -1,6 +1,6 @@
 # Rust Backend
 
-这是 RVideo 当前唯一保留的服务实现，覆盖鉴权、用户管理、数据同步、搜索流式接口、详情、代理、豆瓣接口与高级内容接口。
+这是 RVideo 的 Rust 服务实现，覆盖鉴权、用户管理、数据同步、搜索流式接口、详情、代理、豆瓣接口与高级内容接口。
 
 ## 运行
 
@@ -45,3 +45,7 @@ docker compose up -d
 ```
 
 该编排会启动 Rust 服务和 MySQL，服务地址为 `http://127.0.0.1:3000`。
+
+## 许可证
+
+本项目采用 `Apache-2.0` 许可证，见 [LICENSE](/Users/jizhenggang/Documents/kvideo/KVideo/LICENSE)。
