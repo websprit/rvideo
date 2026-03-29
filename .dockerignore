@@ -1,0 +1,6 @@
+.dockerignore
+.git
+.next
+.next-cache
+node_modules
+rust-backend/target
