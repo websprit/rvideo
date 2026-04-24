@@ -1368,6 +1368,7 @@ function applySettingsSnapshot(settings, kind, message) {
   renderSettingsSources(normalized);
   renderSubscriptions(normalized);
   renderAccessPasswords(normalized);
+  window.localStorage.setItem('kvideo-settings', JSON.stringify(normalized));
   if (subscriptionSummary) {
     subscriptionSummary.textContent = `订阅 ${countSubscriptionEntries(subscriptionSourcesEl?.textContent || '')}`;
   }
